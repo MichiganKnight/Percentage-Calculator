@@ -1,5 +1,11 @@
-$("#remain").keyup(function() {
-    $("#total").val($(this).val());
+$("#total").keyup(function() {
+    $("#remain").val($(this).val());
+});
+
+$("#current").keyup(function() {
+    var totalQuestions = $("#total").val();
+    var remainingQuestions = totalQuestions - $("#current").val();
+    $("#remain").val(remainingQuestions);
 });
 
 $("#correct").keyup(function () {
