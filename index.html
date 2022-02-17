@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Percentage Calculator</title>
+    <link rel="shortcut icon"
+        href="https://www.gstatic.com/devrel-devsite/prod/v4b49895941ba1dd2df68fee10a0f3d4e3a71c73f4e3e8932eba1481cb318e8c2/developers/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="center">
+        <label>Total Amount: </label>
+        <input type="text" id="total" placeholder="100" size="2" value="100">
+        <br><br>
+        <label>Current Question: </label>
+        <input type="text" id="question" placeholder="0" size="2" value="0" autofocus>
+        <br><br>
+        <label>Questions Remaining: </label>
+        <input type="text" id="remain" placeholder="100" size="2" value="100" readonly>
+        <br><br>
+        <label>Amount Correct: </label>
+        <input type="text" id="correct" placeholder="0" size="2" value="0">
+        <br><br>        
+        <h3 id="c">0</h3>
+        <h3>-----</h3>
+        <h3 id="t">100</h3>
+        <h3 id="percent">0%</h3>
+        <h3 id="highest"></h3>
+        <button id="reset">Reset</button>
+    </div>
+</body>
+
+<script type="text/javascript" src="script.js"></script>
+
+</html>

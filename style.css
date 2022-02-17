@@ -1,0 +1,15 @@
+body {
+    font-family: Verdana;
+}
+
+#center {
+    text-align: center;
+}
+
+input {
+    text-align: center;
+}
+
+button {
+    cursor: hand;
+}
