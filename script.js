@@ -1,8 +1,8 @@
-$("#total").keyup(function() {
+$("#total").keyup(function () {
     $("#remain").val($(this).val());
 });
 
-$("#current").keyup(function() {
+$("#current").keyup(function () {
     var totalQuestions = $("#total").val();
     var remainingQuestions = totalQuestions - $("#current").val();
     $("#remain").val(remainingQuestions);
@@ -89,4 +89,20 @@ function GetPercent(correct, total) {
     } else if (percent % 1 != 0) {
         return percent.toFixed(2);
     }
+}
+
+$(document).ready(function () {
+    var info = WIKIPEDIA.getData("https://en.wikipedia.org/wiki/Lockheed_C-130_Hercules");
+    alert(info);
+    console.log(info);
+});
+
+async function searchWikipedia(searchQuery) {
+    const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
+    const response = await fetch(endpoint);
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+    const json = await response.json();
+    return json;
 }
